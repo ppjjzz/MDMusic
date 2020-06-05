@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c83e2e"
+    tools:context=".module.login.LoginFragment">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="110dp"
+        android:contentDescription="Logo"
+        android:src="@drawable/logo_round"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.panjiazhi.mdmusic.ui.view.StateButton
+        android:id="@+id/mobileLoginNextButton"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="50dp"
+        android:text="手机号登录"
+        android:textColor="#c83e2e"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:normalBackgroundColor="@color/white"
+        app:pressedBackgroundColor="#f1d8d5"
+        app:radius="25dp" />
+
+    <com.panjiazhi.mdmusic.ui.view.StateButton
+        android:id="@+id/button2"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="立即体验"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/mobileLoginNextButton"
+        app:layout_constraintStart_toStartOf="@+id/mobileLoginNextButton"
+        app:layout_constraintTop_toBottomOf="@+id/mobileLoginNextButton"
+        app:normalBackgroundColor="#c83e2e"
+        app:normalStrokeColor="#d47368"
+        app:normalStrokeWidth="1dp"
+        app:pressedBackgroundColor="#d47368"
+        app:radius="25dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

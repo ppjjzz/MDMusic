@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".module.login.MobileLoginSecondFragment">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.panjiazhi.mdmusic.module.login.MobileLoginViewModel" />
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <EditText
+            android:id="@+id/loginPasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="请输入密码"
+            android:text="@={viewModel.password}"
+            android:inputType="textPassword" />
+        <com.panjiazhi.mdmusic.ui.view.StateButton
+            android:id="@+id/mobileLoginButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="登录"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:enabled="@{viewModel.canLogin}"
+            app:unableBackgroundColor="#ec8782"
+            app:normalBackgroundColor="@color/colorPrimary"
+            app:pressedBackgroundColor="#f1d8d5"
+            app:radius="25dp" />
+    </LinearLayout>
+
+</layout>

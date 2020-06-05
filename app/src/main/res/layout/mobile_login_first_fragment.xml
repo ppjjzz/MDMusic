@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.panjiazhi.mdmusic.module.login.MobileLoginViewModel" />
+    </data>
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        tools:context=".module.login.MobileLoginFirstFragment">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:text="未注册手机号登录后将自动创建账号" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={viewModel.phoneNumber}"
+            android:hint="请输入手机号"
+            android:ems="10"
+            android:inputType="phone" />
+
+        <com.panjiazhi.mdmusic.ui.view.StateButton
+            android:id="@+id/mobileLoginNextButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:normalBackgroundColor="@color/colorPrimary"
+            app:pressedBackgroundColor="#f1d8d5"
+            app:radius="25dp" />
+    </LinearLayout>
+</layout>

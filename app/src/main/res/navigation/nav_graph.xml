@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LoginFragment">
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.panjiazhi.mdmusic.module.login.LoginFragment"
+        android:label="@string/login_fragment_label"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_LoginFragment_to_mobileLoginFirstFragment"
+            app:destination="@id/mobileLoginFirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mobileLoginFirstFragment"
+        android:name="com.panjiazhi.mdmusic.module.login.MobileLoginFirstFragment"
+        android:label="手机号登录"
+        tools:layout="@layout/mobile_login_first_fragment" >
+        <action
+            android:id="@+id/action_mobileLoginFirstFragment_to_mobileLoginSecondFragment"
+            app:destination="@id/mobileLoginSecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mobileLoginSecondFragment"
+        android:name="com.panjiazhi.mdmusic.module.login.MobileLoginSecondFragment"
+        android:label="手机号登录"
+        tools:layout="@layout/fragment_mobile_login_second" />
+</navigation>
